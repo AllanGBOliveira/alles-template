@@ -96,13 +96,17 @@ a {
 }
 
 .card {
-    width: 350px;
-    height: 300px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
-    color: invert(100%);
-    position: relative;
-    border-radius: 15px;
+    padding: 20px 0;
+    font-size: 30px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    transition: all .2s ease-in-out;
+    grid-column: span 2;
+}
+
+.card:hover {
+    transform: scale(1.1, 1.1);
 }
 
 .text-white {
@@ -315,10 +319,39 @@ input[type=password]:focus {
     background-color: var(--tetra-3);
 }
 
+.grid-row {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-gap: 50px;
+    background-color: transparent;
+    padding: 10px;
+}
+
+.side-filter {
+    background-color: rgba(255, 255, 255, 0.8);
+    grid-row: 1/ span 50;
+    grid-column: span 1;
+    transform: none;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    transition: all .2s ease-in-out;
+}
+
 @media only screen and (max-width: 768px) {
     .fab {
         top: -2.2rem;
         right: 5rem;
         left: 5rem;
+    }
+    .side-filter {
+        display: none;
+    }
+    .grid-row {
+        grid-template-columns: auto auto;
+    }
+    #mySidenav a {
+        position: fixed;
     }
 }
