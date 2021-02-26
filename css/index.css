@@ -4,6 +4,10 @@
     --tetra-1: #833fba;
     --tetra-2: #ba3f76;
     --tetra-3: #76ba3f;
+    --success: #10B981;
+    --danger: #EF4444;
+    --info: #06B6D4;
+    --warning: #EAB308;
 }
 
 body {
@@ -40,7 +44,13 @@ body {
 }
 
 a {
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
     text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .topnav a {
@@ -103,6 +113,51 @@ a {
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
     transition: all .2s ease-in-out;
     grid-column: span 2;
+    position: relative;
+    width: 100%;
+    /* height: 100%; */
+}
+
+.card .offer-name {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: black;
+    line-height: 0;
+    /* text-align: left; */
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .offer-description {
+    font-size: .75rem;
+    color: gray;
+    line-height: 0;
+    text-align: left;
+    padding-left: 1.5rem;
+}
+
+.card .offer-size {
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+    line-height: 0;
+    /* text-align: left; */
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .offer-size-description {
+    font-size: .75rem;
+    color: gray;
+    line-height: 0;
+    text-align: left;
+    padding-left: 1.5rem;
+    display: flex;
+    gap: 10px;
 }
 
 .card-login {
@@ -123,8 +178,52 @@ a {
     color: white;
 }
 
+.text-primary {
+    color: var(--primary);
+}
+
+.text-secondary {
+    color: var(--secondary);
+}
+
+.text-tetra-1 {
+    color: var(--tetra-1);
+}
+
+.text-tetra-2 {
+    color: var(--tetra-2);
+}
+
+.text-tetra-3 {
+    color: var(--tetra-3);
+}
+
+.text-succes {
+    color: var(--success);
+}
+
+.text-danger {
+    color: var(--danger);
+}
+
+.text-info {
+    color: var(--info);
+}
+
+.text-warning {
+    color: var(--warning);
+}
+
+.text-shadow {
+    text-shadow: 1px 1px 5px rgb(0 0 0 / 19%);
+}
+
 .text-left {
     text-align: left;
+}
+
+.shadow {
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
 }
 
 button {
@@ -303,6 +402,7 @@ input[type=password]:focus {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    z-index: 2;
 }
 
 #mySidenav a:hover {
@@ -339,7 +439,7 @@ input[type=password]:focus {
 
 .side-filter {
     background-color: rgba(255, 255, 255, 0.8);
-    grid-row: 1/ span 50;
+    grid-row: 1/ span 5;
     grid-column: span 1;
     transform: none;
     text-align: center;
@@ -347,6 +447,7 @@ input[type=password]:focus {
     font-size: 30px;
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
     transition: all .2s ease-in-out;
+    max-width: 25vw;
 }
 
 .bg-primary {
@@ -355,6 +456,18 @@ input[type=password]:focus {
 
 .bg-secondary {
     background-color: var(--secondary);
+}
+
+.bg-tetra-1 {
+    background-color: var(--tetra-1);
+}
+
+.bg-tetra-2 {
+    background-color: var(--tetra-2);
+}
+
+.bg-tetra-3 {
+    background-color: var(--tetra-3);
 }
 
 .group-check {
@@ -415,13 +528,25 @@ input[type=password]:focus {
 .group-check input:checked~.checkmark {
     background-color: var(--primary);
     transform: scale(1.01);
-    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    box-shadow: 0 4px 8px 0 rgb(63 185 132 / 20%), 0 6px 20px 0 rgb(63 185 132 / 19%);
 }
 
 .group-check input:checked~.checkmark.secondary {
     background-color: var(--secondary);
     transform: scale(1.01);
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.group-check input:checked~.checkmark.tetra-1 {
+    background-color: var(--tetra-1);
+    transform: scale(1.01);
+    box-shadow: 0 4px 8px 0 rgb(131 63 186 / 20%), 0 6px 20px 0 rgb(131 63 186 / 19%);
+}
+
+.group-check input:checked~.checkmark.tetra-2 {
+    background-color: var(--tetra-2);
+    transform: scale(1.01);
+    box-shadow: 0 4px 8px 0 rgb(186 63 118 / 20%), 0 6px 20px 0 rgb(186 63 118 / 19%);
 }
 
 
@@ -455,6 +580,111 @@ input[type=password]:focus {
     transform: rotate(45deg);
 }
 
+.card-offer {
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0rem;
+    top: .2rem;
+    background: rgba(63, 185, 132, .05);
+    width: 80%;
+    z-index: 0;
+    border-bottom-right-radius: 100px;
+    border-top-right-radius: 25px;
+    border-color: var(--primary);
+    border: 1px solid;
+    border-left: 0;
+    color: var(--primary);
+}
+
+.card-offer-icon {
+    position: absolute;
+    left: -1rem;
+    top: .75rem;
+    z-index: 1;
+    text-shadow: 1px 1px 5px rgb(0 0 0 / 19%);
+    color: var(--primary);
+}
+
+.card-offer.info {
+    background: rgba(6, 182, 212, .05);
+    border-color: var(--info);
+    color: var(--info);
+}
+
+.card-offer-icon.info {
+    color: var(--info);
+}
+
+.card-offer.secondary {
+    background: rgba(49, 71, 94, .05);
+    border-color: var(--secondary);
+    color: var(--secondary);
+}
+
+.card-offer-icon.secondary {
+    color: var(--secondary);
+}
+
+.card-offer.tetra-1 {
+    background: rgba(131, 63, 186, .05);
+    border-color: var(--tetra-1);
+    color: var(--tetra-1);
+}
+
+.card-offer-icon.tetra-1 {
+    color: var(--tetra-1);
+}
+
+.card-offer.tetra-2 {
+    background: rgba(186, 63, 118, .05);
+    border-color: var(--tetra-2);
+    color: var(--tetra-2);
+}
+
+.card-offer-icon.tetra-2 {
+    color: var(--tetra-2);
+}
+
+.card-offer.tetra-3 {
+    background: rgba(118, 186, 63, .05);
+    border-color: var(--tetra-3);
+    color: var(--tetra-3);
+}
+
+.card-offer-icon.tetra-3 {
+    color: var(--tetra-3);
+}
+
+.card-offer.success {
+    background: rgba(16, 185, 129, .05);
+    border-color: var(--success);
+    color: var(--success);
+}
+
+.card-offer-icon.success {
+    color: var(--success);
+}
+
+.card-offer.warning {
+    background: rgba(234, 179, 8, .05);
+    border-color: var(--warning);
+    color: var(--warning);
+}
+
+.card-offer-icon.warning {
+    color: var(--warning);
+}
+
+.card-offer.danger {
+    background: rgba(239, 68, 68, .05);
+    border-color: var(--danger);
+    color: var(--danger);
+}
+
+.card-offer-icon.danger {
+    color: var(--danger);
+}
+
 @media only screen and (max-width: 768px) {
     .fab {
         top: -2.2rem;
@@ -468,6 +698,6 @@ input[type=password]:focus {
         grid-template-columns: auto auto;
     }
     #mySidenav a {
-        position: fixed;
+        display: none;
     }
 }
