@@ -1,6 +1,9 @@
 :root {
     --primary: #3fb984;
     --secondary: #31475e;
+    --tetra-1: #833fba;
+    --tetra-2: #ba3f76;
+    --tetra-3: #76ba3f;
 }
 
 body {
@@ -270,6 +273,46 @@ input[type=password]:focus {
 
 .show {
     display: block;
+}
+
+#mySidenav a {
+    position: absolute;
+    left: -95px;
+    transition: 0.3s;
+    padding: 15px 15px 15px 1px;
+    width: 110px;
+    text-decoration: none;
+    font-size: .8rem;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+#mySidenav a:hover {
+    left: 0;
+}
+
+#about {
+    top: 180px;
+    background-color: var(--primary);
+}
+
+#blog {
+    top: 240px;
+    background-color: var(--tetra-1);
+}
+
+#projects {
+    top: 300px;
+    background-color: var(--tetra-2);
+}
+
+#contact {
+    top: 360px;
+    background-color: var(--tetra-3);
 }
 
 @media only screen and (max-width: 768px) {
