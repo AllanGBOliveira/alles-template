@@ -53,6 +53,50 @@ a {
     cursor: pointer;
 }
 
+.fav {
+    content: "\ee0e";
+    font-family: 'remixicon' !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+}
+
+.fav:before {
+    content: "\ee0f";
+    font-family: 'remixicon' !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+}
+
+.fav:hover:before {
+    content: "\ee0e";
+    font-family: 'remixicon' !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* .fav:focus:before {
+    content: "\ee0e";
+    font-family: 'remixicon' !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+} */
+
+.fav:active:before {
+    content: "\ee0e";
+    font-family: 'remixicon' !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+}
+
+.fav.active:before {
+    content: "\ee0e";
+    font-family: 'remixicon' !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    color: var(--danger);
+}
+
 .topnav a {
     color: #f2f2f2;
     text-align: center;
@@ -549,6 +593,12 @@ input[type=password]:focus {
     box-shadow: 0 4px 8px 0 rgb(186 63 118 / 20%), 0 6px 20px 0 rgb(186 63 118 / 19%);
 }
 
+.group-check input:checked~.checkmark.tetra-3 {
+    background-color: var(--tetra-3);
+    transform: scale(1.01);
+    box-shadow: 0 4px 8px 0 rgb(118 186 63 / 20%), 0 6px 20px 0 rgb(118 186 63 / 19%);
+}
+
 
 /* Create the checkmark/indicator (hidden when not checked) */
 
@@ -684,6 +734,38 @@ input[type=password]:focus {
 .card-offer-icon.danger {
     color: var(--danger);
 }
+
+.product-opt {
+    display: inline-flex;
+    list-style: none;
+}
+
+.product-opt .btn {
+    visibility: hidden;
+    font-size: 1.5rem;
+}
+
+.share {
+    color: grey;
+    font-size: 1.5rem;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+
+/* .share:hover+.product-opt .btn {
+    display: inline-block;
+} */
+
+
+/* .product-opt:target {
+    display: inline-block;
+} */
 
 @media only screen and (max-width: 768px) {
     .fab {

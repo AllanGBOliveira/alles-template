@@ -16,11 +16,27 @@ window.onclick = function(event) {
     }
 }
 
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
-output.innerHTML = slider.value; // Display the default slider value
 
-// Update the current slider value (each time you drag the slider handle)
-slider.oninput = function() {
-    output.innerHTML = this.value;
+
+var header = document.getElementById("productOptions");
+var btns = header.getElementsByClassName("fav");
+for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+        if (this.className != "fav active") {
+            this.className = "fav active";
+        } else {
+            this.className = "fav";
+        }
+    });
+}
+
+function showShare() {
+    var x = document.getElementById('shareBtns');
+    if (x.style.visibility === 'hidden') {
+        x.style.visibility = 'visible';
+        x.style.opacity = '100%';
+    } else {
+        x.style.visibility = 'hidden';
+        x.style.opacity = '0%';
+    }
 }
